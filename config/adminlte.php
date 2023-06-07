@@ -254,6 +254,12 @@ return [
             //'roles'     => ['reviewer', 'committee','author'],
         ],
         [
+            'text'       => 'Event',
+            'route'      => 'event.home',
+            'icon'      => 'far fa-fw fa-file',
+            //'roles'     => ['reviewer', 'committee','author'],
+        ],
+        [
             'text'       => 'Log out',
             'route'        => 'user.refresh',
             'icon'      => 'far fa-fw fa-file',
