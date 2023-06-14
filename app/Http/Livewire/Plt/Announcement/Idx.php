@@ -18,19 +18,14 @@ class Idx extends Component
     public function addAnnouncement_Enable(){
         $this->addAnnouncement = true;
     }
-
-    public function Announcement_Disable(){
+    public function addAnnouncement_Disable(){
         $this->addAnnouncement = false;
     }
-
     public function announcementEdit_Enable($announcementId){
         $this->editEnable = true;
         $this->announcementId = $announcementId;
-        
     }
-
     public function announcementEdit_Disable(){
         $this->editEnable = false;
-        
     }
 }

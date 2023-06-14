@@ -44,8 +44,7 @@ Route::get('/menu/idx', \App\Http\Livewire\Menu\Idx::class)->name('menu.idx');
 //Anouncement
 
 Route::get('/plt/landing-page', \App\Http\Livewire\Plt\Idx::class)->name('plt.home');
-
+//Event
 Route::get('/event/home', \App\Http\Livewire\Event\Home::class)->name('event.home');
-Route::get('/search', 'ProductController@search')->name('search');
 
 

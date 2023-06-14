@@ -7,7 +7,7 @@ use App\Models\Plt\Announcements;
 
 class Edit extends Component
 {
-    public $title, $body;
+    public $title, $body, $created_at;
     public $announcementId;
     public function render()
     {
@@ -19,12 +19,14 @@ class Edit extends Component
         $announcement = Announcements::where('id', $announcementId)->first();
         $this->title = $announcement->title;
         $this->body =$announcement->body;
+        $this->created_at = $announcement->created_at;
     }
 
     public function update(){
         Announcements::where('id', $this->announcementId)->update([
             'title' => $this->title,
             'body' => $this->body,
+            'created_at' => $this->created_at,
         ]);
         $this->emitUp('announcementEdit_Disable');
 
