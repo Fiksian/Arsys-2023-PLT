@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Event\Functions;
 use Livewire\Component;
 use App\Models\Events\Tabel;
 
+
 class Lists extends Component
 {
     
@@ -12,8 +13,9 @@ class Lists extends Component
 
     public function render()
     {
-        $event = Tabel::all();
-        return view('livewire.event.functions.lists', ['events' => $event]);
+        $Lists = Tabel::paginate(
+            $perPage = 8, $columns = ['*'], $pageName = 'users');
+        return view('livewire.event.functions.lists', compact('Lists')); //['events' => $event]);
     }
     public function refresh_Event_Lists(){
         $this->render();
