@@ -10,7 +10,7 @@ class Lists extends Component
 {
     
     protected $listeners = ['refresh_Event_Lists' => '$refresh'];
-
+    public $search;
     public function render()
     {
         $Lists = Tabel::paginate(
@@ -22,5 +22,15 @@ class Lists extends Component
     }
     public function delete($eventId){
         Tabel::find($eventId)->delete();
+    }
+    public function index(Request $request)
+    {
+        $search = $request->input('search');
+
+        $events = Tabel::query()
+            ->where('event_id', 'LIKE', "%{$search}%")
+            ->get();
+
+        return view('events.home', compact('events'));
     }
 }

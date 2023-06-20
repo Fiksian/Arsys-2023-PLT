@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Tabel extends Model
 {
     use HasFactory;
-    protected $fillable = ['event_id', 'event_eate', 'application_Deadline', 'draft_deadline', 'quota'];
-    protected $table = 'arsys_event';
 
+    protected $fillable = ['event_id', 'event_date', 'application_Deadline', 'draft_deadline', 'quota'];
+    protected $table = 'arsys_event' ;
+    
+    
 }
