@@ -242,7 +242,7 @@ return [
             //'roles'     => ['reviewer', 'committee','author'],
         ],
         [
-            'text'       => 'My Profile',
+            'text'       => 'Profile',
             'route'      => 'menu.idx',
             'icon'      => 'far fa-fw fa-file',
             //'roles'     => ['reviewer', 'committee','author'],
