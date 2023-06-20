@@ -14,7 +14,7 @@ class Lists extends Component
     public function render()
     {
         $Lists = Tabel::paginate(
-            $perPage = 8, $columns = ['*'], $pageName = 'users');
+            $perPage = 6, $columns = ['*'], $pageName = 'users');
         return view('livewire.event.functions.lists', compact('Lists')); //['events' => $event]);
     }
     public function refresh_Event_Lists(){
