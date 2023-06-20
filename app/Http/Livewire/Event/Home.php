@@ -10,8 +10,8 @@ class Home extends Component
     {
         return view('livewire.event.home')->layout('adminlte::page');
     }
-        public function index(Request $request)
-        {
+    public function index(Request $request)
+    {
         $search = $request->input('search');
 
         $events = Tabel::query()

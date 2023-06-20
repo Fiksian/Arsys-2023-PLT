@@ -7,20 +7,24 @@ use App\Models\Events\Tabel;
 
 class Add extends Component
 {
-    public $Event_Name, $Seats, $Event_Date;
+    public $event_id, $quota, $event_date, $application_deadline, $draft_deadline;
     public function render()
     {
         return view('livewire.event.functions.add');
     }
     public function save(){
         Tabel::create([
-            'Event_Name' => $this->Event_Name,
-            'Seats' => $this->Seats,
-            '$Event_Date'=> $this->Event_Date,
+            'event_id' => $this->event_id,
+            'quota' => $this->quota,
+            'event_date'=> $this->event_date,
+            'application_deadline'=> $this->application_deadline,
+            'draft_deadline'=> $this->draft_deadline,
         ]);
-        $this->Event_Name ='';
-        $this->Seats ='';
-        $this->Event_Date ='';
+        $this->event_id ='';
+        $this->quota ='';
+        $this->event_date ='';
+        $this->application_deadline ='';
+        $this->draft_deadline ='';
         $this->emit('refresh_Event_Lists');
     }
 }
